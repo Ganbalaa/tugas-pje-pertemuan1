@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 1 Javascript - Menghitung Luas</title>
+</head>
+<body>
+    <h2>Hasil Perhitungan Luas Bangun Datar</h2>
+    <hr>
+    
+    <!-- Tempat untuk menampilkan hasil di halaman web -->
+    <div id="hasil-perhitungan"></div>
+
+    <script>
+        // 1. Fungsi untuk menghitung luas Persegi Panjang
+        // Menggunakan rumus: panjang * lebar
+        function luasPersegiPanjang(panjang, lebar) {
+            return panjang * lebar;
+        }
+
+        // 2. Fungsi untuk menghitung luas Bujur Sangkar
+        // Menggunakan rumus: sisi * sisi
+        function luasBujurSangkar(sisi) {
+            return sisi * sisi;
+        }
+
+        // 3. Fungsi untuk menghitung luas Segitiga
+        // Menggunakan rumus: 0.5 * alas * tinggi
+        function luasSegitiga(alas, tinggi) {
+            return 0.5 * alas * tinggi;
+        }
+
+        // === Deklarasi Variabel dengan Nilai Bebas ===
+        let nilaiPanjang = 16;
+        let nilaiLebar = 6;
+        
+        let nilaiSisi = 8;
+        
+        let nilaiAlas = 200;
+        let nilaiTinggi = 4;
+
+        // === Memanggil fungsi dan menyimpan hasilnya ===
+        let hasilPersegiPanjang = luasPersegiPanjang(nilaiPanjang, nilaiLebar);
+        let hasilBujurSangkar = luasBujurSangkar(nilaiSisi);
+        let hasilSegitiga = luasSegitiga(nilaiAlas, nilaiTinggi);
+
+        // === Menampilkan Output ke Halaman Web (HTML) ===
+        document.getElementById("hasil-perhitungan").innerHTML = `
+            <p><strong>1. Persegi Panjang</strong> <br>
+            Panjang: ${nilaiPanjang}, Lebar: ${nilaiLebar} <br>
+            Luas = ${hasilPersegiPanjang}</p>
+
+            <p><strong>2. Bujur Sangkar</strong> <br>
+            Sisi: ${nilaiSisi} <br>
+            Luas = ${hasilBujurSangkar}</p>
+
+            <p><strong>3. Segitiga</strong> <br>
+            Alas: ${nilaiAlas}, Tinggi: ${nilaiTinggi} <br>
+            Luas = ${hasilSegitiga}</p>
+        `;
+
+        // Menampilkan Output ke Console Browser juga (Opsional, untuk debugging)
+        console.log("Luas Persegi Panjang: " + hasilPersegiPanjang);
+        console.log("Luas Bujur Sangkar: " + hasilBujurSangkar);
+        console.log("Luas Segitiga: " + hasilSegitiga);
+    </script>
+</body>
+</html>
